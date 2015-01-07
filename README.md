@@ -1,6 +1,13 @@
 # Captureit
 
-TODO: Write a gem description
+
+Installation CutyCapt
+----------------
+
+### Install CutyCapt on Debian, Ubuntu or Linux Mint
+
+    sudo apt-get install cutycapt
+    
 
 ## Installation
 
@@ -20,7 +27,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'captureit'
+    Captureit::Capture("http://google.com", :filename => "google.jpg")
 
 ## Contributing
 
