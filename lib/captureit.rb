@@ -2,13 +2,18 @@ require "captureit/version"
 
 module Captureit
 
-  class InvalidExtensionError < StandardError
+  class << self
+    # Usage: Captureit::Capture.new(url, options).capture
+    # 
+    # example: Captureit::Capture("http://google.com", :filename => "google.jpg").capture
+    #
+    def Capture(url, options = {})
+      Captureit::Capture.new(url, options).capture
+    end
   end
 
-  # Usage: Captureit::Capture.new(url, options).capture
-  # 
-  # example: Captureit::Capture("http://google.com", :filename => "google.jpg").capture
-  #
+  class InvalidExtensionError < StandardError
+  end
 
   class Capture
 
